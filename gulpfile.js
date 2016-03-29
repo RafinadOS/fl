@@ -45,20 +45,6 @@ gulp.task('img', function() {
    .pipe(connect.reload())
 });
 
-// move images for conten
-gulp.task('img2', function() {
-   return gulp.src([	'images/*.jpg','images/*.png',])
-   .pipe(gulp.dest('app/images/'))
-   .pipe(connect.reload())
-});
-
-// move favicons
-gulp.task('favicon', function() {
-   return gulp.src([	'img/favicon/*.jpg','img/favicon/*.xml','img/favicon/*.png','img/favicon/*.ico','img/favicon/*.json',])
-   .pipe(gulp.dest('app/img/favicon/'))
-   .pipe(connect.reload())
-});
-
 // concat .js files
 gulp.task('js', function() {
    return gulp.src('js/*.js')
@@ -81,4 +67,4 @@ gulp.task('watch', function() {
 });
 
 // default tusk "gulp"
-gulp.task('default', ['connect', 'less', 'concat-css', 'html', 'js', 'img', 'fonts', 'img2', 'favicon', 'watch']);
+gulp.task('default', ['connect', 'less', 'concat-css', 'html', 'js', 'img', 'fonts', 'watch']);
