@@ -302,7 +302,6 @@ html, body {
 				position: absolute;
 				left: 16px;
 				top: 22px;
-				background: url('../img/checked-big.png') right 0 no-repeat;
 			}
 		}
 	}
@@ -310,7 +309,6 @@ html, body {
 .form {
 	clear: both;
 	display: block;
-	overflow: hidden;
 	width: 100%;
 	padding: 30px 0 0 0;
 	&-title {
@@ -380,6 +378,14 @@ html, body {
 			-moz-box-shadow: inset 0 0 3px rgba(103,85,32,.5);
 			-webkit-box-shadow: inset 0 0 3px rgba(103,85,32,.5);
 			box-shadow: inset 0 0 3px rgba(103,85,32,.5);
+			-webkit-transition: .2s;
+			-moz-transition: .2s;
+			transition: .2s;
+			&:focus {
+				-webkit-box-shadow: 0 0 8px rgba(0,0,0,.3);
+				-moz-box-shadow: 0 0 8px rgba(0,0,0,.3);
+				box-shadow: 0 0 8px rgba(0,0,0,.3);
+			}
 			&.captcha-input {
 				float: right;
 				-webkit-box-shadow: none !important;
@@ -391,6 +397,7 @@ html, body {
 				border-top: 1px solid #907b3c;
 				border-right: 1px solid #907b3c;
 				border-bottom: 1px solid #907b3c;
+				border-left: none !important;
 				-webkit-border-top-right-radius: 3px;
 				-webkit-border-bottom-right-radius: 3px;
 				-moz-border-radius-topright: 3px;
@@ -428,6 +435,7 @@ html, body {
 			border-top: 1px dashed #907b3c;
 			border-left: 1px dashed #907b3c;
 			border-bottom: 1px solid #907b3c;
+			border-right: none !important;
 			width: 90px;
 			height: 40px;
 			-webkit-border-top-left-radius: 3px;
